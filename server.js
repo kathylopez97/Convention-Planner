@@ -27,4 +27,3 @@ app.listen(PORT, () =>
 // Can change this up later, just wanted basic working. Still needs a lot of work
 
 // Notes made so I can remember how this works. I feel like a easier way should exist...
-// Got sidetracked and this JUST SO I COULD PLAY WITH THE API
