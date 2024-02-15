@@ -16,6 +16,14 @@ app.get('/', (req, res) => {
   res.render('homepage');
 });
 
+app.get('/createevent', (req, res) => {
+  res.sendFile(path.join(__dirname, '/public/html/createEvent.html'));
+})
+
+app.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, '/public/html/login.html'));
+})
+
 app.listen(PORT, () =>
   console.log(`Server is running on http://localhost:${PORT} `)
 );
@@ -25,5 +33,3 @@ app.listen(PORT, () =>
 // controllers / homeRouts.js is where we can do the login api.
 // public / css || public / script.js should be the place where the css and scripts go
 // Can change this up later, just wanted basic working. Still needs a lot of work
-
-// Notes made so I can remember how this works. I feel like a easier way should exist...
