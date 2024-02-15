@@ -31,8 +31,8 @@ router.post('/login', (req, res) => {
 
         if (!dbUserData) {
             res
-            .status(400)
-            .json({ message: 'Incorrect email or password! Please try again.' })
+                .status(400)
+                .json({ message: 'Incorrect email or password! Please try again.' })
             return;
         }
 
@@ -40,14 +40,14 @@ router.post('/login', (req, res) => {
 
         if (!correctPassword) {
             res
-            .status(400)
-            .json({ message: 'Incorrect email or password! Please try again.' });
+                .status(400)
+                .json({ message: 'Incorrect email or password! Please try again.' });
             return;
         }
 
         req.session.save(() => {
             req.session.loggedIn = true;
-            
+
             res
                 .status(200)
                 .json({ user: dbUserData, message: 'Successfully logged in!' });
