@@ -36,7 +36,7 @@ router.post('/login', (req, res) => {
             return;
         }
 
-        const correctPassword = User.validatePassword(req.body.password);
+        const correctPassword = dbUserData.checkPassword(req.body.password);
 
         if (!correctPassword) {
             res
