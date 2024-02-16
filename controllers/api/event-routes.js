@@ -3,6 +3,7 @@ const { Event, User } = require("../../models");
 
 router.post("/", async (req, res) => {
   try {
+    console.log(req.body)
     const dbEventData = await Event.create({
       event_name: req.body.name,
       image: req.body.image,
@@ -13,7 +14,9 @@ router.post("/", async (req, res) => {
       attendance_number: req.body.attendance,
       creator_id: req.body.creator_id,
     });
-  } catch {
+
+    res.status(200).json(dbEventData);
+  } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
@@ -39,7 +42,7 @@ router.get("/", async (req, res) => {
     // log the data that was returned
     console.log(events);
     res.render("events", events);
-  } catch {
+  } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
@@ -55,7 +58,7 @@ router.get("/:id", async (req, res) => {
         },
       ],
     });
-  } catch {
+  } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
