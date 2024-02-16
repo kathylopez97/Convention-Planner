@@ -5,4 +5,9 @@ router.get('/', async (req, res) => {
   res.render('homepage');
 });
 
+router.get('/login', async (req, res) => {
+  // Send the rendered Handlebars.js template back as the response
+  res.render('login');
+});
+
 module.exports = router;
