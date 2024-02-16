@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS event_db;
+DROP DATABASE IF EXISTS convention_planner_db;
 
-CREATE DATABASE event_db;
+CREATE DATABASE convention_planner_db;

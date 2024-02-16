@@ -69,13 +69,15 @@ app.post('/api/events/:creatorID', upload.single('eventImage'), async (req, res)
     console.log(error);
     res.status(500).json({ message: 'Error occured' });
   }
-
+  
 });
+
+app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () =>
-    console.log(`Server is running on http://localhost:${PORT} `)
-  );
+  console.log(`Server is running on http://localhost:${PORT} `)
+  )
 });
 
 // main.handlebars has the default info
