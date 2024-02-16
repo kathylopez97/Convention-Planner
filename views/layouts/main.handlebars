@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Convention Planner</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/jass.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+</head>
+<body>
+  <header>
+    <h1>Welcome to Convention Planner</h1>
+  </header>
+  <nav>
+    <a href="/">Home</a>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <a href="/login">Login</a>
+    {{/if}}
+  </nav>
+  <main>
+    <aside>
+      <h2>Create your event here!!</h2>
+    </aside>
+    <div class="convention">
+      {{{body}}}
+    </div>
+  </main>
+  {{#if loggedIn}}
+  <script src="/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
