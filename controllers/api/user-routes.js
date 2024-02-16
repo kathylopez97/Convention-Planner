@@ -15,7 +15,7 @@ router.post('/', async (req, res) => {
 
             res.status(200).json(dbUserData);
         });
-    } catch {
+    } catch (err) {
         console.log(err);
         res.status(500).json(err);
     }
@@ -52,7 +52,7 @@ router.post('/login', (req, res) => {
                 .status(200)
                 .json({ user: dbUserData, message: 'Successfully logged in!' });
         });
-    } catch {
+    } catch (err) {
         console.log(err);
         res.status(500).json(err);
     }
