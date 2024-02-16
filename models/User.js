@@ -38,7 +38,7 @@ User.init(
       },
     },
     isCreator: {
-      type: DataTypes.STRING,
+      type: DataTypes.BOOLEAN,
       allowNull: false,
     },
   },
