@@ -28,6 +28,6 @@ const eventForm = async (event) => {
     }
 };
 
-document.querySelector('.create-event').addEventListener('submit', eventForm);
+document.querySelector('#create-event').addEventListener('submit', eventForm);
 //need to add this to the html page.
 //<input type="file" id="eventImage" name="eventImage" accept="image/*">
