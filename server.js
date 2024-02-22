@@ -4,7 +4,6 @@ const session = require('express-session');
 const path = require('path');
 const handlebars = require('handlebars');
 const multer = require('multer');
-
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const routes = require('./controllers');
