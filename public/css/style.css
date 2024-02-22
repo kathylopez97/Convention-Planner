@@ -27,22 +27,28 @@
   a:visited {
     color: inherit;
   }
-  
+ 
+
   header {
-    padding: 40px;
+
+    padding: 30px;
     text-align: center;
-    background: var(--primary);
+    background: rgb(106, 127, 155);
     color: var(--light);
   }
   
   main {
+ 
     display: flex;
     flex-wrap: wrap;
   }
-   
+  
+ 
+  
   nav {
+    background-image:url(public/images/conventionplanner.jpeg);
     display: flex;
-    background-color: var(--secondary);
+    background-color:rgb(224, 201, 201);
   }
   
   nav a {
