@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const User = require('../../models');
+const { User } = require('../../models');
 
 router.post('/', async (req, res) => {
     try {
@@ -15,7 +15,7 @@ router.post('/', async (req, res) => {
 
             res.status(200).json(dbUserData);
         });
-    } catch {
+    } catch (err) {
         console.log(err);
         res.status(500).json(err);
     }
@@ -36,7 +36,7 @@ router.post('/login', (req, res) => {
             return;
         }
 
-        const correctPassword = User.validatePassword(req.body.password);
+        const correctPassword = dbUserData.checkPassword(req.body.password);
 
         if (!correctPassword) {
             res
@@ -52,7 +52,7 @@ router.post('/login', (req, res) => {
                 .status(200)
                 .json({ user: dbUserData, message: 'Successfully logged in!' });
         });
-    } catch {
+    } catch (err) {
         console.log(err);
         res.status(500).json(err);
     }
