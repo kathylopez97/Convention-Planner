@@ -43,6 +43,8 @@
     flex-wrap: wrap;
   }
   
+ 
+  
   nav {
     background-image:url(public/images/conventionplanner.jpeg);
     display: flex;
