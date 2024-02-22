@@ -4,7 +4,7 @@
 // If "response" or POST is "ok" it will logout and send us to the home page
 
 const logout = async () => {
-    console.log('testseta')
+
     const response = await fetch('/api/user/logout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
