@@ -1,3 +1,4 @@
+ 
 :root {
     --primary: #3d5852;
     --secondary: #86938f;
@@ -28,15 +29,24 @@
     color: inherit;
   }
  
+ 
 
   header {
-
-    padding: 30px;
+    padding: -10px;
     text-align: center;
-    background: rgb(106, 127, 155);
+    background: rgb(1, 4, 7);
     color: var(--light);
   }
   
+  h1 {
+    padding-left: 10px ;
+    position: relative;
+    width: 150px;
+    float: center;
+    margin-top:16px;
+    cursor: pointer;
+  }
+ 
   main {
  
     display: flex;
@@ -47,13 +57,12 @@
  
   
   nav {
-    background-image:url(public/images/conventionplanner.jpeg);
     display: flex;
-    background-color:rgb(224, 201, 201);
+    background-color:rgb(238, 232, 232);
   }
   
   nav a {
-    color: var(--light);
+    color: var(--white);
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
