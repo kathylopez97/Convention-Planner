@@ -24,7 +24,7 @@ const eventForm = async (event) => {
   });
 
   if (response.ok) {
-    document.location.replace("/homepage");
+    document.location.replace("/dashboard");
   } else {
     console.log("ERROR  " + response.status);
     alert("failed to upload image, see console for log");
