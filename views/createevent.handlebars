@@ -1,7 +1,7 @@
 <div class="row justify-space-between-md">
   <div class="login-card">
     <h2 class="page-title">Create Event</h2>
-    <form class="form login-form">
+    <form id="event-form" class="form login-form">
       <div class="form-group">
         <label for="eventName">Event Name</label>
         <input class="form-input" type="text" id="eventName" />
@@ -23,8 +23,12 @@
         <input class="form-input" type="text" id="description" />
       </div>
       <div class="form-group">
+        <label for="image">Description</label>
+        <input class="form-input" type="file" id="eventImage" accept="image/png image/jpeg" />
+      </div>
+      <div class="form-group">
         <button class="btn btn-primary" type="submit" id="create-event">Submit</button>
       </div>
     </form>
   </div>
-<script src="/scripts/createEvent.js"></script>
+<script src="/scripts/creatingEvent.js"></script>
