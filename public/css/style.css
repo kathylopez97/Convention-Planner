@@ -1,4 +1,4 @@
-:root {
+ :root {
   --primary: #3d5852;
   --secondary: #86938f;
   --tertiary: #1a6354;
@@ -37,31 +37,39 @@ header {
   color: var(--light);
 }
 
-main {
-
-  display: flex;
-  flex-wrap: wrap;
-}
-
-
-
-nav {
-  background-image: url(public/images/conventionplanner.jpeg);
-  display: flex;
-  background-color: rgb(224, 201, 201);
-}
-
-nav a {
-  color: var(--light);
-  padding: 14px 20px;
-  text-decoration: none;
-  text-align: center;
-}
-
-nav a:hover {
-  color: var(--secondary);
-  background-color: var(--dark);
-}
+  h1 {
+    padding-left: 10px ;
+    position: relative;
+    width: 150px;
+    float: center;
+    margin-top:16px;
+    cursor: pointer;
+  }
+ 
+  main {
+ 
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+  
+  
+  nav {
+    display: flex;
+    background-color:rgb(238, 232, 232);
+  }
+  
+  nav a {
+    color: var(--white);
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  nav a:hover {
+    color: var(--secondary);
+    background-color: var(--dark);
+  }
 
 .btn-no-style {
   background: none;
