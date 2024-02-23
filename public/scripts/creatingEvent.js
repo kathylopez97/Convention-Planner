@@ -3,18 +3,20 @@ const eventForm = async (event) => {
   let eventName = document.getElementById("eventName");
   let eventImage = document.getElementById("eventImage");
   let startDate = document.getElementById("startDate");
-  let startTime = document.getElementById("startTime");
   let price = document.getElementById("price");
   let description = document.getElementById("description");
 
   // encapsulate the event form data in an object
   const formData = new FormData();
+  const datetime = startDate.value.split('T');
   formData.append("eventName", eventName.value);
   formData.append("eventImage", eventImage.files[0]);
-  formData.append("startDate", startDate.value);
-  formData.append("startTime", startTime.value);
+  formData.append("startDate", datetime[0]);
+  formData.append("startTime", datetime[1]);
   formData.append("price", price.value);
   formData.append("description", description.value);
+
+  console.log(startDate.value.split('T'));
 
   const response = await fetch("/api/event", {
     method: "POST",
