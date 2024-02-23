@@ -16,8 +16,6 @@ const eventForm = async (event) => {
   formData.append("price", price.value);
   formData.append("description", description.value);
 
-  console.log(startDate.value.split('T'));
-
   const response = await fetch("/api/event", {
     method: "POST",
     body: formData,
