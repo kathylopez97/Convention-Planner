@@ -1,0 +1,31 @@
+    <img src="images/comic-con2.jpg" alt="Convention Image">
+<div class="row justify-space-between-md">
+  <div class="create-card">
+    <h2 class="page-title">Create Event</h2>
+    <form id="event-form" class="form login-form">
+      <div class="form-group">
+        <label for="eventName">Event Name</label>
+        <input class="form-input" type="text" id="eventName" />
+      </div>
+      <div class="form-group">
+        <label for="startDate">Start Date</label>
+        <input class="form-input" type="datetime-local" id="startDate" />
+      </div>
+      <div class="form-group">
+        <label for="price">Admission Fee</label>
+        <input class="form-input" type="text" id="price" />
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input class="form-input" type="text" id="description" />
+      </div>
+      <div class="form-group">
+        <label for="image">Description</label>
+        <input class="form-input" type="file" id="eventImage" accept="image/png image/jpeg" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit" id="create-event">Submit</button>
+      </div>
+    </form>
+  </div>
+<script src="/scripts/creatingEvent.js"></script>
