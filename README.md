@@ -74,7 +74,7 @@ that will allows users to create new events at convention.
 
 The User will be able to create and save new events. When logged in, you can view all events that have been created.
  
-The motivations from The Fakes  was to create a web-applications for users create seek organized data planner to see what kind of conventions are showcasing globally among user interests. 
+The motivations from The Fakes was to create a web-applications for Users to use a structured data planner to see what kind of conventions are showcasing globally among user interests. 
 
 Please enjoy our app! Thank you.
 
@@ -263,7 +263,7 @@ Thanks to our resources on creating our app!
 [issues-url]: https://github.com/kathylopez97/Convention-Planner/issues
 
 <!-- Forks Markdown -->
-[forks-shield]:https://img.shields.io/badge/FORKS--npm--?style=for-the-badge&labelColor=WHITE
+[forks-shield]:https://img.shields.io/badge/FORKS--4--?style=for-the-badge&logo=npm&logoColor=BLUE&labelColor=WHITE&cacheSeconds=%20%23181717&link=r
 [forks-url]:https://github.com/kathylopez97/Convention-Planner/forks
 
 <!-- License Markdown badge-->
