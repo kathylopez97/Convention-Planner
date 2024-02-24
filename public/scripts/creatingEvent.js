@@ -1,3 +1,5 @@
+// Create event function for specific inputs //
+
 const eventForm = async (event) => {
   event.preventDefault();
   let eventName = document.getElementById("eventName");
@@ -24,7 +26,7 @@ const eventForm = async (event) => {
   });
 
   if (response.ok) {
-    document.location.replace("/homepage");
+    document.location.replace("/dashboard");
   } else {
     console.log("ERROR  " + response.status);
     alert("failed to upload image, see console for log");
@@ -32,5 +34,3 @@ const eventForm = async (event) => {
 };
 
 document.querySelector("#event-form").addEventListener("submit", eventForm);
-//need to add this to the html page.
-//<input type="file" id="eventImage" name="eventImage" accept="image/*">
