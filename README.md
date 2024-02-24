@@ -74,7 +74,7 @@ that will allows users to create new events at convention.
 
 The User will be able to create and save new events. When logged in, you can view all events that have been created.
  
-The motivations from The Fakes was to create a web-applications for Users to use a structured data planner to see what kind of conventions are showcasing globally among user interests. 
+The Fakes motivation was to create a web-application specifically for Users to see what kind of conventions are showcasing globally among their interests. 
 
 Please enjoy our app! Thank you.
 
