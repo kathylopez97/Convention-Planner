@@ -56,7 +56,7 @@ header {
   
   nav {
     display: flex;
-    background-color:rgb(238, 232, 232);
+    background-color:rgb(249, 244, 244);
   }
   
   nav a {
@@ -117,13 +117,14 @@ header {
   flex: 0 0 50%;
   max-width: 50%;
   padding: 5px;
-  border: 3px solid var(--dark);
-  border-radius: var(--border-radius);
+  border: 3px solid var(--white);
+  border-radius: var(--error);
   border-style: double;
   border-width: thick;
   background-color: #000000;
   color: var(--light);
   z-index: 1;
+  
 }
 
 /* LAYOUT */
