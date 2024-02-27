@@ -1,3 +1,4 @@
+// Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files //
 const router = require("express").Router();
 const path = require("path");
 const multer = require("multer");
@@ -11,9 +12,9 @@ const storage = multer.diskStorage({
     cb(
       null,
       Date.now() +
-        "-" +
-        Math.round(Math.random() * 1e9) +
-        path.extname(file.originalname)
+      "-" +
+      Math.round(Math.random() * 1e9) +
+      path.extname(file.originalname)
     );
   },
 });
@@ -58,7 +59,7 @@ router.get("/", async (req, res) => {
 
     // log the data that was returned
     console.log(events);
-    res.status(200).render('all-events', {events});
+    res.status(200).json(events);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -75,12 +76,9 @@ router.get("/:id", async (req, res) => {
         },
       ],
     });
-
-    const event = eventData.get({ plain: true });
-    res.status(200).render('single-event', {event});
   } catch (err) {
     console.log(err);
-    res.status(500).json('err');
+    res.status(500).json(err);
   }
 });
 

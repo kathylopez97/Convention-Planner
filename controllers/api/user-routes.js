@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { User } = require("../../models");
 
+// Post for sign-up on website. Require a session so they stay logged in //
 router.post("/", async (req, res) => {
   try {
     const dbUserData = await User.create({
@@ -23,6 +24,7 @@ router.post("/", async (req, res) => {
   }
 });
 
+// Similar post to above, but for login instead of sign-up //
 router.post("/login", async (req, res) => {
   try {
     const dbUserData = await User.findOne({
@@ -37,7 +39,7 @@ router.post("/login", async (req, res) => {
         .json({ message: "Incorrect email or password! Please try again." });
       return;
     }
-
+    // Check password to make sure it agrees to data for email used to sign in //
     const correctPassword = dbUserData.checkPassword(req.body.password);
 
     if (!correctPassword) {
@@ -62,6 +64,7 @@ router.post("/login", async (req, res) => {
   }
 });
 
+// Logout post - cancels current session //
 router.post("/logout", (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {

@@ -1,8 +1,10 @@
+// Connection utitilizing Sequelize and encrypted env //
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
 let sequelize;
 
+// Add JAWSDB to utilize Sequelize and database on Heroku //
 if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {

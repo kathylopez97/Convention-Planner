@@ -1,3 +1,6 @@
+// Login function that initiates when clicking login buttons //
+// Fetch data and see if there is an email and password that match and then if "ok" send to homepage //
+
 const loginForm = async (event) => {
     
     event.preventDefault();
@@ -19,6 +22,9 @@ const loginForm = async (event) => {
         }
     }
 };
+
+// Same as login but also includes username and creator to add to api data //
+// Creator is for future functionality where we can give permissions if creator is checked in sign-up form //
 
 const signupForm = async (event) => {
     event.preventDefault();
